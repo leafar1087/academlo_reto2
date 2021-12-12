@@ -1,0 +1,64 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*.contenedor{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas:    "header"
+                            "main"
+                            "footer";
+}
+
+.contenedor header{
+    grid-area: header;
+}
+
+.contenedor main{
+    display: flex;
+    justify-content: space-around;
+}
+.contenedor main .suscription{
+    color: red;
+    
+}
+
+.contenedor main .why-us{
+    color: red;
+    
+}
+
+.contenedor footer{
+    grid-area: footer;
+}*/
+
+.contenedor{
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas:    "principal      principal"
+                            "suscription    why-us"
+                            "footer         footer";
+}
+
+.contenedor .principal{
+    grid-area: principal;
+}
+
+.contenedor .suscription{
+    grid-area: suscription;
+}
+
+.contenedor .why-us{
+    grid-area: why-us;
+}
+
+.contenedor .footer{
+    grid-area: footer;
+}
+

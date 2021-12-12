@@ -1,0 +1,161 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    --background: #e6eff6;
+    --background-subscription: #2bb3b1;
+    --background-why-us: #4abebd;
+    --title-1: #5fbdb9;
+    --title-2: #f3ffff;
+    --subTitle-1: hsl(71, 73%, 54%);
+    --text-1: #b7bac1;
+
+    /*TIPOGRAFIA*/
+    @import url('https://fonts.googleapis.com/css2?family=Karla:wght@200;400;700&display=swap');
+}
+
+body{
+    max-width: 1440px;
+    font-family: 'Karla', sans-serif;
+    background-color:var(--background);
+}
+
+.contenedor{
+    width: 42.5%;
+    margin:auto;
+    margin-top: 5rem;
+    display: grid;
+    /*grid-gap: 20px;*/
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas:    "principal      principal"
+                            "suscription    why-us"
+                            "footer         footer";
+    
+}
+
+.contenedor .principal{
+    grid-area: principal;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-content: center;
+    background-color: #fff;
+    padding: 40px 40px 15px 30px;
+    border-radius: 0.5rem 0.5rem 0 0;
+    /*height: 220px;*/
+}
+
+.contenedor .principal .title{
+    color: var(--title-1);
+    font-size: 1.5rem;
+    /*padding-bottom: 1rem;*/
+    font-weight: 700;
+    padding-bottom: 1rem;
+}
+
+.contenedor .principal .sub-title{
+    color:var(--subTitle-1);
+    font-weight: 700;
+    padding-top: 1rem;
+}
+
+.contenedor .principal .text{
+    color: var(--text-1);
+    line-height: 27px;
+    padding: 1rem 0 1rem 0;
+    font-weight: 400;
+}
+
+.contenedor .suscription,
+.contenedor .why-us{
+    padding: 1rem 1rem 1.5rem 30px;
+    /*height: 220px;*/
+}
+.contenedor .suscription .title,
+.contenedor .why-us .title{
+    color: var(--title-2);
+    
+}
+
+.contenedor .suscription{
+    grid-area: suscription;
+    background-color:var(--background-subscription);
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    border-radius: 0 0 0 0.5rem;
+}
+
+.contenedor .suscription .title{
+    font-weight: 700;
+}
+
+.contenedor .suscription .price{
+    display: flex;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+    padding-bottom: 0.5rem;
+}
+
+.contenedor .suscription .price #price{
+    font-size: 2rem;
+    color: var(--title-2);
+    font-weight: 400;
+}
+
+.contenedor .suscription .price #time{
+    font-size: 0.8rem;
+    color: var(--title-2);
+    
+}
+
+.contenedor .suscription .text{
+    font-size: 0.95rem;
+    color: var(--title-2);
+    
+}
+
+.contenedor .suscription form button{
+    width: 90%;
+    height: 2rem;
+    background-color: var(--subTitle-1);
+    border-radius: 0.2rem;
+    color: whitesmoke;
+    font-weight: 700;
+    border-color: var(--subTitle-1);
+
+}
+
+.contenedor .why-us{
+    grid-area: why-us;
+    background-color:var(--background-why-us);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 0 0 0.5rem 0;
+}
+
+.contenedor .why-us .title{
+    font-weight: 700;
+}
+
+.contenedor .why-us .reason{
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.contenedor .why-us .reason span{
+    /*padding: 1.5px 0 1.5px 0;*/
+    color: var(--background);
+    padding-top: 0.15rem;
+}
+
+.contenedor .footer{
+    grid-area: footer;
+}
+
